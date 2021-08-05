@@ -138,7 +138,7 @@ header .search-bar-container #search-bar {
 }
 
 body {
-  height: 400rem;
+  height: 300rem;
 }
 
 header .search-bar-container label {
@@ -258,6 +258,7 @@ header .search-bar-container label:hover {
 
 .home .content {
   text-align: center;
+  margin-top: 1.5rem;
 }
 .home .content h3 {
   font-size: 4.5rem;
@@ -429,6 +430,197 @@ header .search-bar-container label:hover {
   color: #666;
 }
 
+.gallery .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.gallery .box-container .box {
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1rem solid #fff;
+  border-radius: 0.5rem;
+  flex: 1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: -100%;
+  height: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+  padding: 4.5rem 0;
+}
+
+.gallery .box-container .box:hover .content {
+  top: 0;
+}
+
+.gallery .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.gallery .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.review .box {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  margin: 2rem 1.5rem;
+}
+
+.review .box img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.review .box p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.review .box .star i {
+  color: #ffa500;
+  font-size: 1.7rem;
+}
+
+.contact .content {
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact .content .image {
+  flex: 1 1 30rem;
+}
+.contact .content .image img {
+  /* width: 30rem; */
+  overflow: hidden;
+  object-fit: cover;
+}
+.contact .content form {
+  flex: 1 1 40rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.contact .content form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .content form .inputBox input,
+.contact .content form textarea {
+  width: 49%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #333;
+  text-transform: lowercase;
+}
+
+.contact .content form textarea {
+  width: 100%;
+  height: 15rem;
+  resize: none;
+}
+
+.brand .brand-container {
+  text-align: center;
+}
+
+.footer {
+  padding: 0;
+  margin: 0;
+}
+
+.footer .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background-color: rgb(0, 0, 0);
+  padding: 2rem 9%;
+  justify-content: space-between;
+}
+
+.footer .content .box {
+  width: 15rem;
+  display: block;
+}
+
+.footer .content .box.about-us {
+  width: 25rem;
+}
+.footer .content .box p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.footer .content .box h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.footer .content .box p,
+.quick-links a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.quick-links a {
+  width: 1rem;
+}
+
+.footer .content h1 {
+  color: #fff;
+  text-align: center;
+  width: 90%;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.footer .content h1 span {
+  color: #ffa500;
+}
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -448,8 +640,26 @@ header .search-bar-container label:hover {
   section {
     padding: 2rem;
   }
+  .packages .box-container {
+    padding-top: 0;
+  }
+
+  .services .box-container {
+    padding-top: 0;
+  }
+
+  .gallery .box-container {
+    padding-top: 0;
+  }
+
+  .contact .content {
+    padding-top: 0;
+  }
 }
 @media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
   #menu-bar {
     display: inline;
     font-size: 2.5rem;
@@ -477,13 +687,20 @@ header .search-bar-container label:hover {
     margin: 1.5rem 0;
     background: #222;
   }
+  .home .content h3 {
+    font-size: 3.5rem;
+  }
+
+  .home .content p {
+    font-size: 2rem;
+  }
+
+  .home .controls {
+    top: 5rem;
+  }
 }
 
 @media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-
   #menu-bar {
     font-size: 2rem;
   }
@@ -492,10 +709,19 @@ header .search-bar-container label:hover {
     font-size: 2.5rem;
     padding: 0.5rem 1rem;
   }
+
+  .footer .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact .content form .inputBox input,
+  textarea {
+    width: 100%;
+  }
 }
 
 @media (max-width: 300px) {
   .heading span {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }

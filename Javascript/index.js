@@ -42,3 +42,46 @@ vidBtn.forEach((btn) => {
     // console.log("Hello", src);
   });
 });
+
+let swiper = new Swiper(".review-slider", {
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    dusableOnInteraction: false,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 1,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+let swiper1 = new Swiper(".brand-slider", {
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    dusableOnInteraction: false,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    991: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+  },
+});
